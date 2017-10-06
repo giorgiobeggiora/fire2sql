@@ -10,7 +10,7 @@ Use Firebase with a basic SQL-like promise-based syntax.
 ## Examples
 
 	const admin     = require('firebase-admin');
-	const fire2sql  = require('./fire2sql.js');
+	const fire2sql  = require('fire2sql');
 	
 	new fire2sql(admin)
 	.select("*").from("users")
