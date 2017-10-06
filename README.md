@@ -14,7 +14,10 @@ If you are using ES2015, you can import the module instead:
 
 	import * as Fire2SQL from "fire2sql";
 
-fire2sql has the following peerDependencies.
+### peerDependencies
+*(npm 3 behavior assumed)*
+
+You will need one of the following packages to use fire2sql, according to your project structure.
 
 Realtime Database:
 - [Firebase Admin Node.js SDK](https://github.com/firebase/firebase-admin-node)
