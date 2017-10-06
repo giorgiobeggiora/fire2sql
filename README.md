@@ -68,37 +68,37 @@ then, if you properly initialized Firebase, you can pass the "firebase" (or "adm
 
 **.json()**
 
-returns a json object
+Returns the promise of a json object
 
 	{k0: v0, k1: v1, ...}
 
 **.entries()**
 
-returns an array of key/value pairs *(similar to Object.entries())*
+Returns the promise of an array of key/value pairs *(similar to Object.entries())*
 
 	[[k0, v0], [k1, v1], ...]
 
 **.object()**
 
-returns an object with "keys" and "values" attrubutes *(similar to Object.keys() plus Object.values())*
+Returns the promise of an object with "keys" and "values" attrubutes *(similar to Object.keys() plus Object.values())*
 
 	{keys: [k0, k1, ...], values: [v0, v1, ...]}
 
 **.map()**
 
-returns a Map object
+Returns the promise of a Map object
 
 	{k0 => v0, k1 => v1, ...}
 
 **.ref()**
 
-returns an array of Firebase references
+Returns the promise of an array of Firebase references
 
 	[Reference0, Reference1, ...]
 
 **.query()**
 
-returns the pure Firebase query (some option could be not applied)
+Returns the promise of a pure Firebase query (some option could be not applied)
 
 	Query
 
