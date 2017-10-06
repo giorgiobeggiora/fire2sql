@@ -7,6 +7,10 @@ Use Firebase with a basic SQL-like promise-based syntax.
 **Supported APIs for Cloud Firestore**
 - none
 
+## Installation
+
+	$ npm install --save fire2sql
+
 ## Examples
 
 	const admin     = require('firebase-admin');
