@@ -52,25 +52,37 @@ Limitations due to this script:
 ## Formats
 
 **.json()**
+
 returns a json object
+
 	{k0: v0, k1: v1, ...}
 
 **.entries()**
-returns an array of key/value pairs (similar to Object.entries())
+
+returns an array of key/value pairs *(similar to Object.entries())*
+
 	[[k0, v0], [k1, v1], ...]
 
 **.object()**
-returns an object with "keys" and "values" attrubutes (similar to Object.keys() plus Object.values())
+
+returns an object with "keys" and "values" attrubutes *(similar to Object.keys() plus Object.values())*
+
 	{keys: [k0, k1, ...], values: [v0, v1, ...]}
 
 **.map()**
+
 returns a Map object
+
 	{k0 => v0, k1 => v1, ...}
 
 **.ref()**
+
 returns an array of Firebase references
+
 	[Reference0, Reference1, ...]
 
 **.query()**
+
 returns the pure Firebase query (some option could be not applied)
+
 	Query
