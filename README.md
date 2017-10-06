@@ -8,8 +8,17 @@ Use Firebase with a basic SQL-like promise-based syntax.
 - none
 
 ## Installation
+fire2sql is available on npm as firebase-admin:
 
 	$ npm install --save fire2sql
+
+To use the module in your application, require it from any JavaScript file:
+
+	var admin = require("fire2sql");
+
+If you are using ES2015, you can import the module instead:
+
+	import * as admin from "fire2sql";
 
 ## Examples
 
