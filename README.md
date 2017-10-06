@@ -24,48 +24,48 @@ Limitations due to this script:
 
 ## Examples
 
-const admin     = require('firebase-admin');
-const fire2sql  = require('./fire2sql.js');
+	const admin     = require('firebase-admin');
+	const fire2sql  = require('./fire2sql.js');
+	
+	new fire2sql(admin)
+	.select("*").from("users")
+	.where("age", ">=", 18)
+	.orderBy("displayName") // --> "orderByChild" will be used
+	.limit(10, 1)
+	.json()
+	.then(console.log).catch(console.error);
 
-new fire2sql(admin)
-.select("*").from("users")
-.where("age", ">=", 18)
-.orderBy("displayName") // --> "orderByChild" will be used
-.limit(10, 1)
-.json()
-.then(console.log).catch(console.error);
+	new fire2sql(admin)
+	.select("*").from("news/politics")
+	.where("date", "between", "2017-09-01", "2017-09-31");
+	.orderBy("date", "DESC") // --> "orderByChild" will be used
+	.json()
+	.then(console.log).catch(console.error);
 
-new fire2sql(admin)
-.select("*").from("news/politics")
-.where("date", "between", "2017-09-01", "2017-09-31");
-.orderBy("date", "DESC") // --> "orderByChild" will be used
-.json()
-.then(console.log).catch(console.error);
-
-new fire2sql(admin)
-.select("*")
-.from("categories")
-.orderBy(null, "DESC") // --> "orderByValue" will be used
-.json()
-.then(console.log).catch(console.error);
+	new fire2sql(admin)
+	.select("*")
+	.from("categories")
+	.orderBy(null, "DESC") // --> "orderByValue" will be used
+	.json()
+	.then(console.log).catch(console.error);
 
 ## Formats
 
-.json()
+*.json()*
     returns a json object
     {k0: v0, k1: v1, ...}
-.entries()
+*.entries()*
     returns an array of key/value pairs (similar to Object.entries())
     [[k0, v0], [k1, v1], ...]
-.object()
+*.object()*
     returns an object with "keys" and "values" attrubutes (similar to Object.keys() plus Object.values())
     {keys: [k0, k1, ...], values: [v0, v1, ...]}
-.map()
+*.map()*
     returns a Map object
 	{k0 => v0, k1 => v1, ...}
-.ref()
+*.ref()*
     returns an array of Firebase references
     [Reference0, Reference1, ...]
-.query()
+*.query()*
     returns the pure Firebase query (some option could be not applied)
     Query
