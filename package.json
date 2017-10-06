@@ -1,0 +1,22 @@
+{
+  "name": "fire2sql",
+  "version": "0.1.0",
+  "description": "Use Firebase with a basic SQL-like promise-based syntax.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giorgiobeggiora/fire2sql.git"
+  },
+  "keywords": [
+    "firebase"
+  ],
+  "author": "Giorgio Beggiora <giorgio.beggiora@gmail.com> (http://www.jure.it)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giorgiobeggiora/fire2sql/issues"
+  },
+  "homepage": "https://github.com/giorgiobeggiora/fire2sql#readme"
+}
