@@ -1,10 +1,10 @@
 # fire2sql
 Use Firebase with a basic SQL-like promise-based syntax.
 
-**Realtime Database support**
+**Supported APIs for Realtime Database**
 - https://github.com/firebase/firebase-admin-node
 
-**Cloud Firestore support**
+**Supported APIs for Cloud Firestore**
 - none
 
 ## Examples
