@@ -1,6 +1,6 @@
 {
   "name": "fire2sql",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Use Firebase with a basic SQL-like promise-based syntax.",
   "main": "index.js",
   "scripts": {
