@@ -74,7 +74,7 @@ returns the pure Firebase query (some option could be not applied)
 
 ## Limitations
 	
-###	Due to Firebase
+### Due to Firebase
 
 - sometime superfluous data could be downloaded
 - you can perform just only one "when"
@@ -82,7 +82,7 @@ returns the pure Firebase query (some option could be not applied)
 - "orderBy" and "limit" could be computed locally
 - no advanced SQL functions support, i.e. aliaes, join, views, functions, ...
 
-### Due to fire2sql
+### Due to fire2sql
 
 - select simple sintax support only (no count, date_format, in, ...)
 - select always return all columns ('*' is used in examples just for readability)
