@@ -1,26 +1,13 @@
 # fire2sql
 Use Firebase with a basic SQL-like promise-based syntax.
 
-Realtime Database support:
+## Support
+
+### Realtime Database
 - https://github.com/firebase/firebase-admin-node
 
-Cloud Firestore
+### Cloud Firestore
 - none
-
-Limitations due to Firebase:
-
-- sometime superfluous data could be downloaded
-- you can perform just only one "when"
-- "when" available operators are: "==", ">=", "<=", "between"
-- "orderBy" and "limit" could be computed locally
-- no advanced SQL functions support, i.e. aliaes, join, views, functions, ...
-
-Limitations due to this script:
-
-- select simple sintax support only (no count, date_format, in, ...)
-- select always return all columns ('*' is used in examples just for readability)
-- from accepts only one path
-- no advanced Firebase functions support, i.e. transaction, users, priority, ...
 
 ## Examples
 
@@ -86,3 +73,20 @@ returns an array of Firebase references
 returns the pure Firebase query (some option could be not applied)
 
 	Query
+
+## Limitations
+	
+###	Due to Firebase
+
+- sometime superfluous data could be downloaded
+- you can perform just only one "when"
+- "when" available operators are: "==", ">=", "<=", "between"
+- "orderBy" and "limit" could be computed locally
+- no advanced SQL functions support, i.e. aliaes, join, views, functions, ...
+
+### Due to fire2sql
+
+- select simple sintax support only (no count, date_format, in, ...)
+- select always return all columns ('*' is used in examples just for readability)
+- from accepts only one path
+- no advanced Firebase functions support, i.e. transaction, users, priority, ...
