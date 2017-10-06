@@ -13,6 +13,9 @@
   "keywords": [
     "firebase"
   ],
+  "peerDependencies": {
+	  "firebase-admin-node": "^5.0.0"
+  },
   "author": "Giorgio Beggiora <giorgio.beggiora@gmail.com> (http://www.jure.it)",
   "license": "ISC",
   "bugs": {
