@@ -1,4 +1,4 @@
-# fire2sql
+# FireSQL
 Use Firebase with a basic SQL-like promise-based syntax.
 
 **Supported APIs for Realtime Database**
