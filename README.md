@@ -27,6 +27,7 @@ Cloud Firestore:
 
 ## Examples
 
+	const admin = require('firebase-admin');
 	const Fire2SQL = require('fire2sql');
 
 	new Fire2SQL(admin)
