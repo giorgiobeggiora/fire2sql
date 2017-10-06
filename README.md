@@ -14,18 +14,18 @@ fire2sql is available on npm as firebase-admin:
 
 To use the module in your application, require it from any JavaScript file:
 
-	var Fire2sql = require("fire2sql");
+	var FireSQL = require("fire2sql");
 
 If you are using ES2015, you can import the module instead:
 
-	import * as Fire2sql from "fire2sql";
+	import * as FireSQL from "fire2sql";
 
 ## Examples
 
-	const admin     = require('firebase-admin');
-	const Fire2sql  = require('fire2sql');
+	const admin   = require('firebase-admin');
+	const FireSQL = require('fire2sql');
 	
-	new Fire2sql(admin)
+	new FireSQL(admin)
 	.select("*").from("users")
 	.where("age", ">=", 18)
 	.orderBy("displayName") // --> "orderByChild" will be used
@@ -33,14 +33,14 @@ If you are using ES2015, you can import the module instead:
 	.json()
 	.then(console.log).catch(console.error);
 
-	new Fire2sql(admin)
+	new FireSQL(admin)
 	.select("*").from("news/politics")
 	.where("date", "between", "2017-09-01", "2017-09-31");
 	.orderBy("date", "DESC") // --> "orderByChild" will be used
 	.json()
 	.then(console.log).catch(console.error);
 
-	new Fire2sql(admin)
+	new FireSQL(admin)
 	.select("*")
 	.from("categories")
 	.orderBy(null, "DESC") // --> "orderByValue" will be used
