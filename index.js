@@ -1,4 +1,4 @@
-class FirebaseAdmin2SQL {
+class Fire2SQL {
 
 	constructor (admin) {
 		this.admin = admin;
@@ -308,4 +308,4 @@ class FirebaseAdmin2SQL {
 
 }
 
-module.exports = FirebaseAdmin2SQL;
+module.exports = Fire2SQL;

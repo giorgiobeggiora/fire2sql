@@ -1,6 +1,6 @@
 {
   "name": "fire2sql",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "Use Firebase with a basic SQL-like promise-based syntax.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,9 @@
     "firebase"
   ],
   "peerDependencies": {
-    "firebase-admin-node": "^5.0.0"
+	  "firebase-admin-node": "5.x",
+	  "firebase": "3.7.x",
+	  "angularfire2": "2.x"
   },
   "author": "Giorgio Beggiora <giorgio.beggiora@gmail.com> (http://www.jure.it)",
   "license": "ISC",

@@ -12,7 +12,7 @@ To use the module in your application, require it from any JavaScript file:
 
 If you are using ES2015, you can import the module instead:
 
-	import * as Fire2SQL from "fire2sql";
+	import Fire2SQL from "fire2sql";
 
 ### peerDependencies
 *(npm 3 behavior assumed)*
@@ -20,6 +20,7 @@ If you are using ES2015, you can import the module instead:
 You will need one of the following packages to use fire2sql, according to your project structure.
 
 Realtime Database:
+- [Firebase Javascript SDK](https://github.com/firebase/firebase-js-sdk)
 - [Firebase Admin Node.js SDK](https://github.com/firebase/firebase-admin-node)
 
 Cloud Firestore:
@@ -27,10 +28,21 @@ Cloud Firestore:
 
 ## Examples
 
+Include firebase
+
+	// example using ES2015 syntax
+	import * as firebase from 'firebase';
+	import * as Fire2SQL from 'fire2sql';
+
+or firebase-admin
+
+	// example using CommonJS syntax
 	const admin = require('firebase-admin');
 	const Fire2SQL = require('fire2sql');
 
-	new Fire2SQL(admin)
+then, if you properly initialized Firebase, you can pass the "firebase" (or "admin") variable to the constructor.
+
+	new Fire2SQL(firebase)
 	.select("*").from("users")
 	.where("age", ">=", 18)
 	.orderBy("displayName") // --> "orderByChild" will be used
@@ -103,6 +115,6 @@ returns the pure Firebase query (some option could be not applied)
 ### Due to fire2sql
 
 - select simple sintax support only (no count, date_format, in, ...)
-- select always return all columns ('*' is used in examples just for readability)
+- select always return all columns ("*" is used in examples just for readability)
 - from accepts only one path
 - no advanced Firebase functions support, i.e. transaction, users, priority, ...
