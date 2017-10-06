@@ -1,12 +1,6 @@
 # Fire2SQL
 Use Firebase with a basic SQL-like promise-based syntax.
 
-**Supported APIs for Realtime Database**
-- https://github.com/firebase/firebase-admin-node
-
-**Supported APIs for Cloud Firestore**
-- none
-
 ## Installation
 fire2sql is available on npm as firebase-admin:
 
@@ -20,10 +14,18 @@ If you are using ES2015, you can import the module instead:
 
 	import * as Fire2SQL from "fire2sql";
 
+fire2sql has the following peerDependencies.
+
+Realtime Database:
+- [Firebase Admin Node.js SDK](https://github.com/firebase/firebase-admin-node)
+
+Cloud Firestore:
+- none
+
 ## Examples
 
 	const Fire2SQL = require('fire2sql');
-	
+
 	new Fire2SQL(admin)
 	.select("*").from("users")
 	.where("age", ">=", 18)
@@ -85,7 +87,7 @@ returns the pure Firebase query (some option could be not applied)
 	Query
 
 ## Limitations
-	
+
 ### Due to Firebase
 
 - sometime superfluous data could be downloaded
