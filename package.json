@@ -15,7 +15,7 @@
   ],
   "peerDependencies": {
 	  "firebase": "^3.7.4",
-	  "firebase-admin-node": "^5.0.0"
+	  "firebase-admin-node": "^4.1.3"
   },
   "author": "Giorgio Beggiora <giorgio.beggiora@gmail.com> (http://www.jure.it)",
   "license": "ISC",
