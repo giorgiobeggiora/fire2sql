@@ -1,15 +1,16 @@
 class Fire2SQL {
 
-	constructor (admin) {
+	constructor (...args) {
+		const [admin, lang] = args;
 		this.admin = admin;
+		this.lang = lang || 'en';
 		this.db = admin.database();
-		this.auth = admin.auth();
+//		this.auth = admin.auth();
 		this.queryParams = {};
 		this.queryType = '';
 		this.resultType = '';
 		this.alreadySorted = false;
 		this.alreadyLimited = false;
-		this.lang = 'it';
 		return this;
 	}
 
@@ -155,6 +156,9 @@ class Fire2SQL {
 	}
 
 	sort (entries) {
+
+		// https://firebase.google.com/docs/database/web/lists-of-data#data-order
+
 		return new Promise((resolve, reject) => {
 			if(this.alreadySorted){
 				resolve(entries);

@@ -17,7 +17,7 @@ If you are using ES2015, you can import the module instead:
 ### peerDependencies
 *(npm 3 behavior assumed)*
 
-You will need one of the following packages to use fire2sql, according to your project structure.
+You will need at least one of the following packages to use fire2sql, according to your project structure.
 
 Realtime Database:
 - [Firebase Javascript SDK](https://github.com/firebase/firebase-js-sdk)
@@ -40,9 +40,9 @@ or firebase-admin
 	const admin = require('firebase-admin');
 	const Fire2SQL = require('fire2sql');
 
-then, if you properly initialized Firebase, you can pass the "firebase" (or "admin") variable to the constructor.
+then, if you properly initialized Firebase, you can pass the "firebase" (or "admin") variable to the constructor, plus the [locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation) (default is "en") that will be used in case of client-side sorting (through [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)).
 
-	new Fire2SQL(firebase)
+	new Fire2SQL(firebase, "es")
 	.select("*").from("users")
 	.where("age", ">=", 18)
 	.orderBy("displayName") // --> "orderByChild" will be used
@@ -108,13 +108,12 @@ Returns the promise of a pure Firebase query (some option could be not applied)
 
 - sometime superfluous data could be downloaded
 - you can perform just only one "when"
-- "when" available operators are: "==", ">=", "<=", "between"
-- "orderBy" and "limit" could be computed locally
-- no advanced SQL functions support, i.e. aliaes, join, views, functions, ...
+- "when" available operators are: "==", ">=", "<=", "between" (inclusive)
+- "orderBy" and "limit" could be computed client-side
+- no advanced SQL functions support, i.e. aliaes, join, count, distinct, date_format, views, functions, ...
 
 ### Due to fire2sql
 
-- select simple sintax support only (no count, date_format, in, ...)
 - select always return all columns ("*" is used in examples just for readability)
 - from accepts only one path
 - no advanced Firebase functions support, i.e. transaction, users, priority, ...
