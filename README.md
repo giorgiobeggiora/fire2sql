@@ -40,7 +40,7 @@ or firebase-admin
 	const admin = require('firebase-admin');
 	const Fire2SQL = require('fire2sql');
 
-then, if you properly initialized Firebase, you can pass the "firebase" (or "admin") variable to the constructor, plus the [locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation) (default is "en") that will be used in case of client-side sorting (through [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare)).
+then, if you properly initialized Firebase, you can pass the "firebase" (or "admin") variable to the constructor, plus the [locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation) (default is "en") that will be used in case of client-side sorting (through [localeCompare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) but considering [Firebase's sorting rules](https://firebase.google.com/docs/database/web/lists-of-data#data-order)).
 
 	new Fire2SQL(firebase, "es")
 	.select("*").from("users")
