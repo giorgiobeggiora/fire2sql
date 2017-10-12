@@ -98,7 +98,7 @@ Returns the promise of an array of Firebase references
 
 **.query()**
 
-Returns the promise of a pure Firebase query (some option could be not applied)
+Returns the promise of a pure Firebase query (non-native quary options will not be applied)
 
 	Query
 
