@@ -108,7 +108,7 @@ Returns the promise of a pure Firebase query (non-native quary options will not 
 
 ### Due to Firebase
 
-- sometime, superfluous (respect to the request) data could be downloaded
+- sometime, superfluous (respect to the request) data could be downloaded, although it's not included in the results
 - you can perform just only one "when"
 - "when" available operators are: "==", ">=", "<=", "between" (inclusive)
 - "orderBy" and "limit" could be computed client-side
