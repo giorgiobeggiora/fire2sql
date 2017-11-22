@@ -43,7 +43,8 @@ or firebase-admin
 then, if you properly initialized Firebase, you can pass the "firebase" (or "admin") variable to the constructor.
 
 	new Fire2SQL(firebase)
-	.select("*").from("users")
+	.select("*")
+	.from("users")
 	.where("age", ">=", 18)
 	.orderBy("displayName") // --> "orderByChild" will be used
 	.limit(10, 1)
@@ -51,7 +52,8 @@ then, if you properly initialized Firebase, you can pass the "firebase" (or "adm
 	.then(console.log).catch(console.error);
 
 	new Fire2SQL(admin)
-	.select("*").from("news/politics")
+	.select("*")
+	.from("news/politics")
 	.where("date", "between", "2017-09-01", "2017-09-31");
 	.orderBy("date", "DESC") // --> "orderByChild" will be used
 	.json()
