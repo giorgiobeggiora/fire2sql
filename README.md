@@ -108,13 +108,13 @@ Returns the promise of a pure Firebase query (non-native quary options will not 
 
 ### Due to Firebase
 
-- sometime superfluous data could be downloaded
+- sometime, superfluous (respect to the request) data could be downloaded
 - you can perform just only one "when"
 - "when" available operators are: "==", ">=", "<=", "between" (inclusive)
 - "orderBy" and "limit" could be computed client-side
 - no advanced SQL functions support, i.e. aliaes, join, count, distinct, date_format, views, functions, ...
-- select always return all columns ("*" is used in examples just for readability)
-- from accepts only one path
+- "select" always return all columns ("*" is used in examples just for readability)
+- "from" accepts only one path
 
 ### Due to fire2sql
 
