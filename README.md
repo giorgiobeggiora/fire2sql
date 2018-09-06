@@ -118,5 +118,5 @@ Returns the promise of a pure Firebase query (non-native quary options will not 
 
 ### Due to fire2sql
 
-- no advanced Firebase functions support, i.e. transaction, users, priority, ...
+- no advanced Firebase functions support, i.e. join, like, transaction, users, priority, ...
 - not realtime (under consideration)
