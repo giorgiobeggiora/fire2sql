@@ -112,7 +112,7 @@ Returns the promise of a pure Firebase query (non-native quary options will not 
 - you can perform just only one "when"
 - "when" available operators are: "==", ">=", "<=", "between" (inclusive)
 - "orderBy" and "limit" could be computed client-side
-- no advanced SQL functions support, i.e. aliaes, join, like, count, distinct, date_format, views, functions, ...
+- no advanced SQL functions support, i.e. wildcards, aliaes, join, like, count, distinct, date_format, views, functions, ...
 - "select" always return all columns ("*" is used in examples just for readability)
 - "from" accepts only one path
 
